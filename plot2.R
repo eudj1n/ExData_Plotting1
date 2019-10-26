@@ -4,9 +4,8 @@
 file <- "./household_power_consumption.txt"
 data <- read.table(file, header = TRUE, sep = ";", stringsAsFactors = FALSE, dec = ".")
 
-# make subset with defined date range
+# make subset with defined date range and define variables
 subset <- data[data$Date %in% c("1/2/2007","2/2/2007") ,]
-
 datetime <- strptime(paste(subset$Date, subset$Time, sep = " "), "%d/%m/%Y %H:%M:%S") 
 globalActivePower <- as.numeric(subset$Global_active_power)
 
