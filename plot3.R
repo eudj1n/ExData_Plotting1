@@ -1,4 +1,5 @@
 # plot3.png generation
+# @note used russian locale for dates
 
 # load text data into table
 file <- "./household_power_consumption.txt"
